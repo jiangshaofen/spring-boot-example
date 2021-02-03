@@ -18,5 +18,6 @@
 	<description>spring-boot-example</description>
 	<modules>
 		<module>spring-boot-jsp</module>
+		<module>spring-boot-thymeleaf</module>
 	</modules>
 </project>
