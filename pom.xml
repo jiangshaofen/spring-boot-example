@@ -16,4 +16,7 @@
 	<packaging>pom</packaging>
 	<name>spring-boot-example</name>
 	<description>spring-boot-example</description>
+	<modules>
+		<module>spring-boot-jsp</module>
+	</modules>
 </project>
