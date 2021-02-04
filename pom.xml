@@ -19,5 +19,45 @@
 	<modules>
 		<module>spring-boot-jsp</module>
 		<module>spring-boot-thymeleaf</module>
+		<module>spring-boot-starter</module>
+		<module>spring-boot-starter-test</module>
 	</modules>
+	
+	
+	<repositories>
+		<repository>
+			<id>local-maven</id>
+			<name>local maven</name>
+			<url>http://127.0.0.1:8086/nexus/content/groups/public/</url>
+		</repository>
+		<repository>
+			<id>aliyun-maven</id>
+			<name>aliyun maven</name>
+			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>local-maven</id>
+			<name>local maven</name>
+			<url>http://127.0.0.1:8086/nexus/content/groups/public/</url>
+		</pluginRepository>
+		<pluginRepository>
+			<id>aliyun-maven</id>
+			<name>aliyun maven</name>
+			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+		</pluginRepository>
+	</pluginRepositories>
+	<distributionManagement>
+		<repository>
+			<id>nexus-releases</id>
+			<name>我的 Maven 库</name>
+			<url>http://127.0.0.1:8086/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<name>我的 Maven SNAPSHOT库</name>
+			<url>http://127.0.0.1:8086/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>

@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.example.erp</groupId>
+		<artifactId>spring-boot-example</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>example-spring-boot-starter</artifactId>
+	<name>example-spring-boot-starter</name>
+	<description>example-spring-boot-starter</description>
+	
+	<!-- 
+	Spring 官方 Starter通常命名为spring-boot-starter-{name} 如 spring-boot-starter-web， 
+	Spring官方建议非官方Starter命名应遵循{name}-spring-boot-starter的格式。 
+	-->
+
+	<!-- 在自己项目有父级项目模式下，引入springboot 依赖项
+	Import dependency management from Spring Boot -->
+	<!-- <dependencyManagement>
+        <dependencies>
+            <dependency>                
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.4.2.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement> -->
+		
+	<dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+    </dependencies>
+</project>
