@@ -13,7 +13,7 @@
 		id, lastName, gender, email
 	</sql>
 	
-	<select id="selectByPrimaryKey" parameterType="com.example.mybatis.domain.Employee" resultMap="BaseResultMap">
+	<select id="selectByPrimaryKey" parameterType="com.example.mybatis.domain.Employee" resultType="com.example.mybatis.domain.Employee">
 		select
 		<include refid="Base_Column_List" />
 		from employee
