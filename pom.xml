@@ -23,6 +23,7 @@
 		<module>spring-boot-starter-test</module>
 		<module>spring-boot-mybatis</module>
 		<module>spring-boot-filter</module>
+		<module>spring-boot-listener</module>
 	</modules>
 	
 	
