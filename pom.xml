@@ -24,7 +24,6 @@
 		<module>spring-boot-mybatis</module>
 		<module>spring-boot-filter</module>
 		<module>spring-boot-listener</module>
-		<module>spring-boot-servlet</module>
 	</modules>
 	
 	
