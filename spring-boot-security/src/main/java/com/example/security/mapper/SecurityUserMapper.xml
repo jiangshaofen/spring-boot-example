@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="com.example.security.mapper.SecurityUserMapper">
+	<resultMap id="BaseResultMap"
+		type="com.example.security.domain.SecurityUser">
+		<id column="uid" jdbcType="VARCHAR" property="uid" />
+		<result column="username" jdbcType="VARCHAR"
+			property="username" />
+		<result column="password" jdbcType="VARCHAR"
+			property="password" />
+		<result column="benabled" jdbcType="INTEGER"
+			property="benabled" />
+		<result column="role" jdbcType="VARCHAR" property="role" />
+		<result column="phone" jdbcType="VARCHAR" property="phone" />
+		<result column="createdate" jdbcType="DATE"
+			property="createdate" />
+	  </resultMap>
+	  	
+	<sql id="Base_Column_List">
+			uid, username, password, benabled, role,phone, createdate
+	</sql>
+  
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		delete from security_user
+		where uid = #{uid,jdbcType=VARCHAR}
+	</delete>
+	<insert id="insert"
+		parameterType="com.example.security.domain.SecurityUser">
+		insert into security_user (uid, username, password,
+		benabled, role, phone,
+		createdate)
+		values (#{uid,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR},
+		#{password,jdbcType=VARCHAR},
+		#{benabled,jdbcType=INTEGER}, #{role,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR},
+		#{createdate,jdbcType=DATE})
+	</insert>
+	<update id="updateByPrimaryKey"
+		parameterType="com.example.security.domain.SecurityUser">
+		update security_user
+		set username = #{username,jdbcType=VARCHAR},
+		password = #{password,jdbcType=VARCHAR},
+		benabled = #{benabled,jdbcType=INTEGER},
+		role = #{role,jdbcType=VARCHAR},
+		phone = #{phone,jdbcType=VARCHAR},
+		createdate = #{createdate,jdbcType=DATE}
+		where uid = #{uid,jdbcType=VARCHAR}
+	</update>
+	
+	<!-- 根据需要手动添加，重新生成时被覆盖 -->
+	<select id="selectByUserName" parameterType="java.lang.String"
+		resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from security_user
+		where username = #{username,jdbcType=VARCHAR}
+	</select>
+	
+	<select id="selectByPrimaryKey" parameterType="java.lang.String"
+		resultMap="BaseResultMap">
+		select uid, username, password, benabled, role, phone, createdate
+		from security_user
+		where uid = #{uid,jdbcType=VARCHAR}
+	</select>
+	<select id="selectAll" resultMap="BaseResultMap">
+		select uid, username, password, benabled, role, phone, createdate
+		from security_user
+	</select>
+</mapper>

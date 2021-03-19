@@ -25,6 +25,7 @@
 		<module>spring-boot-filter</module>
 		<module>spring-boot-listener</module>
 		<module>spring-boot-servlet</module>
+		<module>spring-boot-security</module>
 	</modules>
 	
 	
